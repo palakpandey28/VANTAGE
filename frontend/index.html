@@ -4,14 +4,14 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Settle.AI — Transaction Intelligence</title>
+<title>Vantage — Transaction Intelligence</title>
 
 <!-- Font Awesome for icons -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
 <style>
 /* =========================================================
-   SETTLE.AI — COMPLETE STYLES
+   VANTAGE — COMPLETE STYLES
 ========================================================= */
 
 :root {
@@ -135,6 +135,34 @@ button {
     color: var(--emerald-dark);
 }
 
+.logo-text {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    line-height: 1.1;
+}
+
+.logo-name {
+    font-size: 19px;
+    font-weight: 850;
+    letter-spacing: -.7px;
+    color: var(--text);
+}
+
+.logo-tagline {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-style: italic;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: .4px;
+    color: var(--emerald-dark);
+    opacity: 0.85;
+    margin-left: 12px;
+    padding-left: 12px;
+    border-left: 1px solid rgba(0,124,97,.3);
+    white-space: nowrap;
+}
+
 .nav-links {
     display: flex;
     align-items: center;
@@ -216,7 +244,7 @@ button {
 
 .hero {
     min-height: 100vh;
-    padding: 150px 6% 80px;
+    padding: 60px 6% 80px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 50px;
@@ -555,8 +583,8 @@ button {
 ========================================================= */
 
 .story {
-    min-height: 100vh;
-    padding: 150px 7%;
+    min-height: 50vh;
+    padding: 70px 7%;
     background: var(--black);
     color: white;
     position: relative;
@@ -652,14 +680,14 @@ button {
 ========================================================= */
 
 .final {
-    min-height: 75vh;
+    min-height: 50vh;
     background: var(--black);
     color: white;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: 100px 20px;
+    padding: 70px 20px;
     position: relative;
     overflow: hidden;
 }
@@ -675,17 +703,18 @@ button {
 
 .final-content { position: relative; z-index: 2; }
 .final-small { color: var(--mint); font-size: 10px; font-weight: 900; letter-spacing: 2px; }
-.final h2 { margin-top: 20px; font-size: clamp(55px, 8vw, 105px); line-height: .85; letter-spacing: -6px; }
+.final h2 { margin-top: 20px; font-size: clamp(65px, 9vw, 120px); line-height: .85; letter-spacing: -6px; }
 .final h2 span { color: var(--emerald-2); }
 .final-button {
     margin-top: 40px;
     border: 0;
-    padding: 17px 25px;
-    border-radius: 13px;
+    padding: 22px 40px;
+    border-radius: 14px;
     background: var(--emerald);
     color: white;
-    font-size: 11px;
+    font-size: 17px;
     font-weight: 900;
+    letter-spacing: .5px;
     transition: .3s;
 }
 
@@ -695,15 +724,189 @@ button {
     box-shadow: 0 15px 40px rgba(0,184,135,.2);
 }
 
+/* =========================================================
+   FOOTER — TEAM & LINKS
+========================================================= */
+
 .footer {
     background: var(--black);
     border-top: 1px solid rgba(255,255,255,.06);
-    padding: 30px 6%;
+    padding: 60px 7% 30px;
+    color: rgba(255,255,255,.5);
+    font-size: 13px;
+    letter-spacing: .3px;
+    position: relative;
+    overflow: hidden;
+}
+
+.footer::before {
+    content: "";
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(0,184,135,.08), transparent 65%);
+    right: -150px;
+    top: -200px;
+    pointer-events: none;
+}
+
+.footer-grid {
+    max-width: 1280px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1.3fr;
+    gap: 60px;
+    align-items: start;
+    position: relative;
+    z-index: 2;
+}
+
+.footer-team-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+}
+
+.footer-brand {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.footer-brand-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: white;
+    font-size: 18px;
+    font-weight: 800;
+    letter-spacing: -.5px;
+}
+
+.footer-brand-logo .logo-mark {
+    width: 32px;
+    height: 32px;
+    font-size: 16px;
+    box-shadow: 0 0 0 5px rgba(0,184,135,.1);
+}
+
+.footer-brand p {
+    color: rgba(255,255,255,.4);
+    font-size: 12px;
+    line-height: 1.7;
+    max-width: 320px;
+}
+
+.footer-source-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px 26px;
+    background: var(--emerald);
+    color: white;
+    border-radius: 14px;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: .3px;
+    text-decoration: none;
+    transition: .25s var(--ease);
+    align-self: flex-start;
+    margin-top: 8px;
+}
+
+.footer-source-btn:hover {
+    background: var(--emerald-2);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(0,184,135,.25);
+}
+
+.footer-source-btn i {
+    font-size: 16px;
+}
+
+.footer-col h4 {
+    color: var(--mint);
+    font-size: 10px;
+    font-weight: 900;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 18px;
+}
+
+.footer-person {
+    margin-bottom: 0;
+}
+
+.footer-person-name {
+    color: white;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.footer-socials {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.footer-social {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 9px 16px;
+    background: rgba(255,255,255,.05);
+    border: 1px solid rgba(255,255,255,.08);
+    border-radius: 10px;
+    color: rgba(255,255,255,.7);
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: .2s;
+}
+
+.footer-social:hover {
+    background: rgba(0,184,135,.15);
+    border-color: var(--emerald);
+    color: var(--mint);
+    transform: translateY(-2px);
+}
+
+.footer-social i {
+    font-size: 14px;
+}
+
+.footer-social.linkedin:hover {
+    background: rgba(10,102,194,.2);
+    border-color: #0a66c2;
+    color: #4a9eff;
+}
+
+.footer-social.gmail:hover {
+    background: rgba(234,67,53,.2);
+    border-color: #ea4335;
+    color: #ff6b5b;
+}
+
+.footer-bottom {
+    max-width: 1280px;
+    margin: 50px auto 0;
+    padding-top: 24px;
+    border-top: 1px solid rgba(255,255,255,.06);
     display: flex;
     justify-content: space-between;
+    align-items: center;
     color: rgba(255,255,255,.3);
-    font-size: 9px;
-    letter-spacing: .6px;
+    font-size: 11px;
+    letter-spacing: .5px;
+    position: relative;
+    z-index: 2;
+}
+
+.footer-tagline {
+    color: var(--emerald);
+    font-weight: 600;
 }
 
 /* =========================================================
@@ -1172,6 +1375,7 @@ button {
     .history-stats { grid-template-columns: repeat(2, 1fr); }
     .evidence-grid { grid-template-columns: 1fr; }
     .explain-header { flex-direction: column; align-items: start; }
+    .footer-grid { grid-template-columns: 1fr; gap: 40px; }
 }
 
 @media(max-width: 650px) {
@@ -1214,17 +1418,24 @@ button {
     .chat-page-box { height: 500px; }
     .chat-page-messages { padding: 16px; }
     .chat-page-msg { max-width: 95%; }
-    .footer { flex-direction: column; gap: 10px; padding: 25px 20px; }
     .chat-float-btn { width: 50px; height: 50px; font-size: 22px; bottom: 20px; right: 20px; }
+    .logo-tagline { font-size: 11px; margin-left: 8px; padding-left: 8px; }
+    .footer { padding: 40px 20px 20px; }
+    .footer-grid { grid-template-columns: 1fr; gap: 30px; }
+    .footer-team-grid { grid-template-columns: 1fr 1fr; gap: 16px; }
+    .footer-bottom { flex-direction: column; gap: 10px; text-align: center; margin-top: 30px; }
 }
 
 @media(max-width: 480px) {
     .history-stats { grid-template-columns: 1fr 1fr; }
     .nav-link { font-size: 8px; padding: 4px 8px; }
     .logo { font-size: 15px; }
+    .logo-name { font-size: 15px; }
+    .logo-tagline { font-size: 10px; margin-left: 6px; padding-left: 6px; }
     .logo-mark { width: 28px; height: 28px; font-size: 14px; }
     .history-table .status-badge { font-size: 9px; padding: 2px 8px; }
     .chat-float-btn { width: 44px; height: 44px; font-size: 18px; bottom: 16px; right: 16px; }
+    .footer-team-grid { grid-template-columns: 1fr; gap: 16px; }
 }
 </style>
 </head>
@@ -1240,7 +1451,10 @@ button {
 <nav class="nav" id="nav">
     <div class="logo" onclick="navigateTo('dashboard')">
         <div class="logo-mark">↗</div>
-        SETTLE<span>.AI</span>
+        <div class="logo-text">
+            <span class="logo-name">VANTAGE</span>
+            <span class="logo-tagline">From Complexity to Clarity</span>
+        </div>
     </div>
 
     <div class="nav-links">
@@ -1367,7 +1581,7 @@ button {
             <div class="story-tag">FOLLOW THE TRANSACTION</div>
             <h2>Every transaction leaves a <span>trail.</span></h2>
             <p class="story-description">
-                Settle.AI reconstructs the complete journey of a transaction
+                Vantage reconstructs the complete journey of a transaction
                 from the first authorization to the final ledger entry.
             </p>
         </div>
@@ -1380,7 +1594,7 @@ button {
         <div class="explain-header reveal">
             <h2>From raw events to <span>answers.</span></h2>
             <p>
-                Stop searching through logs manually. Settle.AI turns fragmented
+                Stop searching through logs manually. Vantage turns fragmented
                 transaction data into an explainable investigation.
             </p>
         </div>
@@ -1425,8 +1639,55 @@ button {
          FOOTER
     ==================================================== -->
     <footer class="footer">
-        <span>SETTLE.AI © 2026</span>
-        <span>TRACE • UNDERSTAND • RESOLVE</span>
+        <div class="footer-grid">
+
+            <!-- Brand + Source Code -->
+            <div class="footer-brand">
+                <div class="footer-brand-logo">
+                    <div class="logo-mark">↗</div>
+                    VANTAGE
+                </div>
+                <p>
+                    AI-powered transaction intelligence for tracing money across gateways, banks, and ledgers.
+                </p>
+                <a href="https://github.com/palakpandey28/VANTAGE" target="_blank" rel="noopener" class="footer-source-btn">
+                    <i class="fab fa-github"></i>
+                    View Source Code on GitHub →
+                </a>
+            </div>
+
+            <!-- Team Members (side by side) -->
+            <div class="footer-col footer-team">
+                <h4>Team</h4>
+
+                <div class="footer-team-grid">
+                    <div class="footer-person">
+                        <div class="footer-person-name">Sadiya Malik</div>
+                        <div class="footer-socials">
+                            <a href="https://www.linkedin.com/in/sadiya-malik-2b670b326" target="_blank" rel="noopener" class="footer-social linkedin">
+                                <i class="fab fa-linkedin"></i> LinkedIn
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="footer-person">
+                        <div class="footer-person-name">Palak Pandey</div>
+                        <div class="footer-socials">
+                            <a href="https://www.linkedin.com/in/palak-pandey-52b8a1390/" target="_blank" rel="noopener" class="footer-social linkedin">
+                                <i class="fab fa-linkedin"></i> LinkedIn
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Bottom bar -->
+        <div class="footer-bottom">
+            <span>VANTAGE © 2026</span>
+            <span class="footer-tagline">TRACE • UNDERSTAND • RESOLVE</span>
+        </div>
     </footer>
 </div>
 
@@ -1582,7 +1843,7 @@ button {
 <div id="page-chat" class="page">
     <div class="page-header">
         <h1>💬 <span>AI Chat</span> Assistant</h1>
-        <p>Ask the SettleAI assistant about transactions, issues, and investigations.</p>
+        <p>Ask the Vantage assistant about transactions, issues, and investigations.</p>
     </div>
 
     <div class="chat-page">
@@ -1591,14 +1852,14 @@ button {
                 <div class="chat-page-header">
                     <div class="avatar">✦</div>
                     <div class="info">
-                        <h3>SettleAI Assistant</h3>
+                        <h3>Vantage Assistant</h3>
                         <div class="status">● Online • Ready to help</div>
                     </div>
                 </div>
 
                 <div class="chat-page-messages" id="chatPageMessages">
                     <div class="chat-page-msg ai">
-                        👋 Hello! I'm SettleAI Assistant.
+                        👋 Hello! I'm Vantage Assistant.
                         <br><br>
                         I can help you investigate transactions, explain issues, and trace money flow.
                         <span class="time">Just now</span>
@@ -1956,7 +2217,7 @@ document.addEventListener('keydown', function(e) {
 // CONSOLE WELCOME
 // =========================================================
 
-console.log('%c✦ SETTLE.AI v2.0', 'color: #00b887; font-size: 28px; font-weight: bold;');
+console.log('%c✦ VANTAGE v2.0', 'color: #00b887; font-size: 28px; font-weight: bold;');
 console.log('%c🔍 Transaction Intelligence System', 'color: #71807b; font-size: 14px;');
 console.log('📋 Pages: Dashboard | Investigate | History | AI Chat');
 console.log('💬 Click the chat icon in the bottom right to open AI Chat');
